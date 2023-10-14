@@ -55,6 +55,11 @@
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그인"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zy8-mF-zOW"/>
                                 </connections>
@@ -141,6 +146,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Vq-Pc-bt2"/>
+                    <connections>
+                        <outlet property="registerButton" destination="mdH-vM-rSg" id="Tvy-4c-ksy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,6 +189,11 @@
                                     </backgroundConfiguration>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-Dk-Fcd">
                                 <rect key="frame" x="10" y="353" width="162" height="1"/>
@@ -237,6 +250,11 @@
                                     </attributedString>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-DS-G23">
                                 <rect key="frame" x="10" y="773" width="373" height="1"/>
@@ -253,6 +271,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="registerButton:" destination="jug-ne-2TR" eventType="touchUpInside" id="KBG-BO-v9e"/>
                                     <action selector="registerButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MUL-qA-haC"/>
                                 </connections>
                             </button>
@@ -305,6 +324,7 @@
                     <navigationItem key="navigationItem" style="editor" id="paX-tS-h5w"/>
                     <connections>
                         <outlet property="emailTextField" destination="ZzY-pG-gcF" id="HTL-UA-rhJ"/>
+                        <outlet property="logInButton" destination="6gj-x2-5p4" id="yXm-VZ-Akm"/>
                         <outlet property="nameTextField" destination="1ic-ca-4IX" id="0md-FQ-vm9"/>
                         <outlet property="nickNameTextField" destination="U9m-2o-UnK" id="kfc-vj-SKo"/>
                         <outlet property="passwordTextField" destination="aTm-DB-POC" id="Myo-42-dAx"/>
@@ -312,6 +332,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tks-Om-Ujp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="jug-ne-2TR" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1623.6641221374045" y="3.5211267605633805"/>
         </scene>

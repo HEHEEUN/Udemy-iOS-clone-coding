@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		970F68842ADA805C00C1EFC1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F68832ADA805C00C1EFC1 /* UIView+Extension.swift */; };
+		970F68862ADA842700C1EFC1 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970F68852ADA842700C1EFC1 /* UIViewController+Extension.swift */; };
 		97BA33152AD134D100A8787C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA33142AD134D100A8787C /* AppDelegate.swift */; };
 		97BA33172AD134D100A8787C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA33162AD134D100A8787C /* SceneDelegate.swift */; };
 		97BA33192AD134D100A8787C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97BA33182AD134D100A8787C /* LoginViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		970F68832ADA805C00C1EFC1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		970F68852ADA842700C1EFC1 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		97BA33112AD134D100A8787C /* Section4_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Section4_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97BA33142AD134D100A8787C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97BA33162AD134D100A8787C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +109,9 @@
 				97BA33162AD134D100A8787C /* SceneDelegate.swift */,
 				97BA33182AD134D100A8787C /* LoginViewController.swift */,
 				97BA331A2AD134D100A8787C /* Main.storyboard */,
+				970F68852ADA842700C1EFC1 /* UIViewController+Extension.swift */,
 				97BA33442AD15B7100A8787C /* RegisterViewController.swift */,
+				970F68832ADA805C00C1EFC1 /* UIView+Extension.swift */,
 				97BA331D2AD134D500A8787C /* Assets.xcassets */,
 				97BA331F2AD134D500A8787C /* LaunchScreen.storyboard */,
 				97BA33222AD134D500A8787C /* Info.plist */,
@@ -261,9 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				970F68862ADA842700C1EFC1 /* UIViewController+Extension.swift in Sources */,
 				97BA33192AD134D100A8787C /* LoginViewController.swift in Sources */,
 				97BA33152AD134D100A8787C /* AppDelegate.swift in Sources */,
 				97BA33172AD134D100A8787C /* SceneDelegate.swift in Sources */,
+				970F68842ADA805C00C1EFC1 /* UIView+Extension.swift in Sources */,
 				97BA33452AD15B7100A8787C /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

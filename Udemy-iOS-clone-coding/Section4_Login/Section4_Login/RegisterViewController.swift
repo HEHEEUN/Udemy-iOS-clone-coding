@@ -37,6 +37,8 @@ class RegisterViewController: UIViewController {
     //Button
     @IBOutlet weak var signUpButton: UIButton!
     
+    @IBOutlet weak var logInButton: UIButton!
+    
     //TextFields
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -54,6 +56,7 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTextField()
+        setUpAttribute()
         // Do any additional setup after loading the view.
     }
 
@@ -110,6 +113,25 @@ class RegisterViewController: UIViewController {
             }
         }
     }
+    
+    private func setUpAttribute() {
+        //registerButton
+        let text1 = "계정이 있으신가요?"
+        let text2 = "로그인"
+        
+        let font1 = UIFont.systemFont(ofSize: 13)
+        let font2 = UIFont.boldSystemFont(ofSize: 13)
+        
+        let color1 = UIColor.darkGray
+        let color2 = UIColor.facebook
+        
+        let attributes = generateButtonAttribute(
+            self.logInButton,
+             texts: text1, text2,
+             fonts: font1, font2,
+             colors: color1, color2)
+        self.logInButton.setAttributedTitle(attributes, for: .normal)
+    }
 }
 
 // 정규표현식
@@ -129,3 +151,4 @@ extension String {
         return emailTest.evaluate(with: self)
     }
 }
+
