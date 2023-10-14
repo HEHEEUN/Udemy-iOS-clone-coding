@@ -57,7 +57,9 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setUpTextField()
         setUpAttribute()
-        // Do any additional setup after loading the view.
+        
+        // bug fix
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
 
     // MARK: - Actions
@@ -79,6 +81,17 @@ class RegisterViewController: UIViewController {
             fatalError("Missing TextFieldd...")
         }
     }
+    
+    @IBAction func backButtonDidTap(_ sender: UIBarButtonItem) {
+        //뒤로가기 로직 구사
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
+    
+    
+    
     
     // MARK: - Helpers
     //textField와 textfieldEditignChanged를 연결하기 위한 헬퍼
@@ -132,6 +145,8 @@ class RegisterViewController: UIViewController {
              colors: color1, color2)
         self.logInButton.setAttributedTitle(attributes, for: .normal)
     }
+    
+    
 }
 
 // 정규표현식
