@@ -9,6 +9,12 @@ import UIKit
 
 class RegisterViewController: UIViewController {
     // MARK: - Properties
+    var email: String = ""
+    var name: String = ""
+    var nickName: String = ""
+    var password: String = ""
+    
+    var userInfo: ((UserInfo) -> Void)?
     
     // 유효성검사를 위한 프로퍼티
     // 프로퍼티 옵저버 isValidEmail이라는 곳에서 값을 입력받을 때마다 didset 메소드가 호출됨
@@ -71,12 +77,16 @@ class RegisterViewController: UIViewController {
         switch sender {
         case emailTextField:
             self.isValidEmail = text.isValidEmail()
+            self.email = text
         case nameTextField:
             self.isValidName = text.count > 2
+            self.name  = text
         case nickNameTextField:
             self.isValidNickName = text.count > 2
+            self.nickName = text
         case passwordTextField:
             self.isValidPassword = text.isValidPassword()
+            self.password = text
         default:
             fatalError("Missing TextFieldd...")
         }
@@ -88,6 +98,23 @@ class RegisterViewController: UIViewController {
     }
     
     
+    @IBAction func logInButtonDidTap(_ sender: UIButton) {
+        //뒤로가기 로직 구사
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func registerButtonDidTap(_ sender: UIButton) {
+        //뒤로가기 로직 구사
+        self.navigationController?.popViewController(animated: true)
+        let userInfo = UserInfo(
+            email: self.email,
+            name: self.name,
+            nickName: self.nickName,
+            password: self.password)
+        
+        self.userInfo?(userInfo)
+    }
     
     
     
@@ -118,11 +145,13 @@ class RegisterViewController: UIViewController {
             && isValidPassword
             && isValidNickName {
             UIView.animate(withDuration: 0.33){
-                self.signUpButton.backgroundColor = UIColor.facebook
+                self.signUpButton.backgroundColor = .facebook
+                self.signUpButton.isEnabled = true
             }
         } else {
             UIView.animate(withDuration: 0.33){
-                self.signUpButton.backgroundColor = UIColor.disableButton
+                self.signUpButton.backgroundColor = .disableButton
+                self.signUpButton.isEnabled = false
             }
         }
     }

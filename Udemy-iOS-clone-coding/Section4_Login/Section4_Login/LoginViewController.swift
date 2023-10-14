@@ -8,18 +8,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    var userInfo: UserInfo?
 
     var email = String()
     var password = String()
     
     @IBOutlet weak var registerButton: UIButton!
     
+    @IBOutlet weak var logInButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpAttribute()
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
@@ -28,10 +29,24 @@ class LoginViewController: UIViewController {
     
     @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
+        
+        self.logInButton.backgroundColor = text.count > 2 ? UIColor.facebook : UIColor.disableButton
         self.password = text
     }
     
     @IBAction func loginButtonDidTap(_ sender: Any) {
+        // 회원가입 정보를 전달받아서
+        //그것과 textField 데이터가 일치하면(로그인 위해 입력한)
+        //로그인이 되어야 함
+        guard let userInfo = self.userInfo else { return }
+        
+        if userInfo.email ==  self.email
+            && userInfo.password == self.password {
+            print("로그인 성공")
+            //let vc = storyboard?.instantiateViewController(withIdentifier: "TestVC") as! TestViewController
+            //self.present(vc, animated: true, completion: nil)
+        }
+        else { print("로그인 실패")}
     }
     
     @IBAction func registerButtonDidTap(_ sender: Any) {
@@ -42,6 +57,11 @@ class LoginViewController: UIViewController {
         //self.present(registerViewController, animated: true, completion: nil)
         
         self.navigationController?.pushViewController(registerViewController, animated: true)
+        
+        
+        // ARC - 강한 참조 / 약한 참조 -> ARC 낯춰줌
+        registerViewController.userInfo = { [weak self] (userInfo) in self?.userInfo = userInfo
+        }
     }
     
     private func setUpAttribute() {
