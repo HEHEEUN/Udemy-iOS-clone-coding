@@ -10,16 +10,35 @@ import UIKit
 class RegisterViewController: UIViewController {
     // MARK: - Properties
     
-    //유효성검사를 위한 프로퍼티
-    var isValidEmail = false
-    var isValidName = false
-    var isValidNickName = false
-    var isValidPassword = false
+    // 유효성검사를 위한 프로퍼티
+    // 프로퍼티 옵저버 isValidEmail이라는 곳에서 값을 입력받을 때마다 didset 메소드가 호출됨
+    // didset : 세팅이 된 후에 호출
+    var isValidEmail = false {
+        didSet {
+            self.validateUserInfo()
+        }
+    }
+    var isValidName = false{
+        didSet {
+            self.validateUserInfo()
+        }
+    }
+    var isValidNickName = false {
+        didSet {
+            self.validateUserInfo()
+        }
+    }
+    var isValidPassword = false {
+        didSet {
+            self.validateUserInfo()
+        }
+    }
+    
+    //Button
+    @IBOutlet weak var signUpButton: UIButton!
     
     //TextFields
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -46,13 +65,13 @@ class RegisterViewController: UIViewController {
         
         switch sender {
         case emailTextField:
-            print("email")
+            self.isValidEmail = text.isValidEmail()
         case nameTextField:
-            print("name")
+            self.isValidName = text.count > 2
         case nickNameTextField:
-            print("nickName")
+            self.isValidNickName = text.count > 2
         case passwordTextField:
-            print("password")
+            self.isValidPassword = text.isValidPassword()
         default:
             fatalError("Missing TextFieldd...")
         }
@@ -74,5 +93,39 @@ class RegisterViewController: UIViewController {
         //emailTextfield에서 event가 오면 Target을 누가 처리할 것인지 정해주는 함수
         //RegisterViewController에서 처리할 것, textFieldEditingChanged에메소드 내에서 액션을 처리할 것, 어떠한 이벤트에 대해 처리할 지를 for를 통해 .editingChanged로 만들 것
         */
+    }
+    
+    // 사용자가 입력한 회원정보를 확인하고 -> UI 업데이트
+    private func validateUserInfo() {
+        if isValidName
+            && isValidEmail
+            && isValidPassword
+            && isValidNickName {
+            UIView.animate(withDuration: 0.33){
+                self.signUpButton.backgroundColor = UIColor.facebook
+            }
+        } else {
+            UIView.animate(withDuration: 0.33){
+                self.signUpButton.backgroundColor = UIColor.disableButton
+            }
+        }
+    }
+}
+
+// 정규표현식
+extension String {
+    // password - 대소문자, 특수문자, 숫자 포함 8자 이상일 때 -> True
+    func isValidPassword() -> Bool {
+        let regularExpression = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}"
+        let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", regularExpression)
+        
+        return passwordValidation.evaluate(with: self)
+    }
+    // email - @ 포함 2글자 이상일 때 -> True
+    func isValidEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailTest = NSPredicate.init(format: "SELF MATCHES %@", emailRegEx)
+        
+        return emailTest.evaluate(with: self)
     }
 }

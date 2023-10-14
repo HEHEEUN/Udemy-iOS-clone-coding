@@ -222,19 +222,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-IC-8HL">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-IC-8HL">
                                 <rect key="frame" x="10" y="584" width="373" height="54"/>
+                                <color key="backgroundColor" name="disableButtonColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="4Dy-9l-g4R"/>
                                     <constraint firstAttribute="width" secondItem="QP4-IC-8HL" secondAttribute="height" multiplier="373:54" id="ryv-2X-cal"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="가입">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" name="disableButtonColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="가입"/>
+                                    </attributedString>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWZ-DS-G23">
                                 <rect key="frame" x="10" y="773" width="373" height="1"/>
@@ -306,6 +308,7 @@
                         <outlet property="nameTextField" destination="1ic-ca-4IX" id="0md-FQ-vm9"/>
                         <outlet property="nickNameTextField" destination="U9m-2o-UnK" id="kfc-vj-SKo"/>
                         <outlet property="passwordTextField" destination="aTm-DB-POC" id="Myo-42-dAx"/>
+                        <outlet property="signUpButton" destination="QP4-IC-8HL" id="Y2e-p3-D2h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tks-Om-Ujp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -348,7 +351,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
