@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E990EE25-EA83-4295-83DD-1068794488C3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Section4_Login/RegisterViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "RegisterViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - e67ae72bfc64631b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.nickNameTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/Section4_Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - ca0496a2ebebcb73"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.nickNameTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/Section4_Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - 277e6152cfcfb5fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.nickNameTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/Section4_Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - 328f7027b3676532"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.nickNameTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - 851c0d9132fc4151"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Section4_Login.RegisterViewController"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/Section4_Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "429">
+               </Location>
+               <Location
+                  uuid = "11E3E54D-93DC-4ECC-A2AF-930A369CB4F7 - fdb7991db0f3f0e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Section4_Login.RegisterViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Section4_Login.RegisterViewController&gt;"
+                  moduleName = "Section4_Login"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hee/Desktop/STUDY/UMC/Udemy-iOS-clone-coding/Udemy-iOS-clone-coding/Section4_Login/Section4_Login/RegisterViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "386">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
